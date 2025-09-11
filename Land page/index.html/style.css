@@ -1,0 +1,338 @@
+/* ==============================
+   RESET BÁSICO
+================================= */
+/* Toast premium */
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ffffff; /* fundo branco */
+  color: #000000; /* texto preto */
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+  z-index: 9999;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 220px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Mostrar toast com animação de bounce */
+.toast.show {
+  opacity: 1;
+  animation: bounceIn 0.6s forwards;
+}
+
+/* Hover: sutil interação */
+.toast:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* Botão de fechar */
+.toast button.close-toast {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Keyframes para animação bounce */
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#sobre h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0b2347; /* azul marinho */
+  margin-bottom: 20px;
+}
+
+#sobre p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #222;
+}
+#sobre {
+  background: rgba(11, 35, 71, 0.05); /* azul marinho bem claro */
+  padding: 80px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5; /* cinza claro clean */
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ==============================
+   CONTAINER
+================================= */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ==============================
+   NAVBAR
+================================= */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  color: #0b2347; /* azul marinho */
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #1a3b70; /* azul hover */
+}
+
+/* ==============================
+   HEADER
+================================= */
+header {
+  background-color: #0b2347; /* azul marinho profundo */
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* ==============================
+   SEÇÕES
+================================= */
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #0b2347; /* azul marinho */
+}
+
+/* Container de Cards */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Card Clean */
+.card-clean {
+  background-color: rgba(255, 255, 255, 0.95); /* transparente levemente */
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  padding: 30px 25px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Efeito Hover */
+.card-clean:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.15);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Ícone do Card */
+.card-icon {
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  color: #0b3d91; /* azul de autoridade */
+}
+
+/* Título do Card */
+.card-title {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Texto do Card */
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+/* Container centralizado */
+#accordionProblemas {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+/* Botões do accordion arredondados e azul escuro */
+.accordion-button {
+  background-color: #0b2347; /* azul marinho */
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 15px; /* borda arredondada */
+  margin-bottom: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover no botão */
+.accordion-button:hover {
+  background-color: #0d1f5a; /* azul mais claro no hover */
+  transform: translateX(5px);
+}
+
+/* Estado ativo do botão */
+.accordion-button:not(.collapsed) {
+  background-color: #0d1f5a; /* mantém azul no item aberto */
+  color: #fff;
+}
+
+/* Corpo do accordion */
+.accordion-body {
+  background-color: rgba(255, 255, 255, 0.95); /* branco suave */
+  color: #0b2347; /* texto azul escuro */
+  border-left: 3px solid #0d6efd; /* destaque azul */
+  padding: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-radius: 15px; /* arredondado igual ao botão */
+  transition: all 0.3s ease;
+}
+
+/* Hover no corpo do accordion */
+.accordion-body:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+
+
+/* ==============================
+   CONTATO
+================================= */
+#contato {
+  background-color: #0b2347; /* azul marinho */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contato h2 {
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+#contato .btn {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 12px 25px;
+  border-radius: 50px;
+  background-color: #1a3b70;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+/* Estilo do botão flutuante */
+#whatsappFloat {
+  position: fixed;
+  left: 20px; /* distância da borda esquerda */
+  bottom: 20px; /* distância do rodapé */
+  background-color: #25d366;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 1000;
+}
+
+/* Hover */
+#whatsappFloat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+
+#contato .btn:hover {
+  background-color: #0a1d3c;
+}
+
+/* ==============================
+   RODAPÉ
+================================= */
+footer {
+  background-color: #0b2347; /* azul marinho */
+  color: #ddd;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
